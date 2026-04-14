@@ -21,9 +21,9 @@ const flow = [
       <div class="shell-container hero-layout">
         <div class="hero-copy">
           <p class="eyebrow">MITI · miHoYo Type Indicator</p>
-          <h1>把 MBTI 的答题爽感，改造成米哈游角色人格测试。</h1>
+          <h1>把 MBTI 的答题体验，改造成米哈游角色人格测试。</h1>
           <p class="hero-text">
-            这不是“你是哪种玩家”的粗糙二分，而是先做四维人格，再结合原型气质和角色向量，
+            这不是“你是哪种玩家”的粗糙二分，而是先测四维人格，再结合原型气质和角色向量，
             算出更像你的那一位米哈游角色。
           </p>
           <div class="button-row">
@@ -76,9 +76,9 @@ const flow = [
       <div class="shell-container split-section">
         <div class="section-heading">
           <p class="eyebrow">Game Mix</p>
-          <h2>四个游戏放进同一套人格框架里。</h2>
+          <h2>四个游戏，放进同一套人格档案里。</h2>
           <p class="section-copy">
-            首页首发覆盖《原神》《崩坏：星穹铁道》《崩坏3》《绝区零》。风格不同，角色气质不同，
+            首发覆盖《原神》《崩坏：星穹铁道》《崩坏3》《绝区零》。风格不同，角色气质不同，
             但会在同一组题和同一套引擎里做统一匹配。
           </p>
         </div>
@@ -103,7 +103,8 @@ const flow = [
           <h2>结果是同人娱乐，不是官方设定，也不是专业人格诊断。</h2>
         </div>
         <p>
-          角色对应基于公开剧情印象、玩家共识与娱乐化重构。站内使用的是原创风格化角色卡图，不代表官方素材授权。
+          角色对应基于公开剧情印象、玩家共识与娱乐化重构。站内角色图优先引用公开可访问的角色立绘或社区镜像，
+          仅用于非商业展示，版权归对应权利方所有。
         </p>
       </div>
     </section>
@@ -277,7 +278,7 @@ const flow = [
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 680px) {
   .hero-metrics,
   .hero-game-grid,
   .world-grid,

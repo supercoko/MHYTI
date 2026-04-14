@@ -1,10 +1,24 @@
-const __VLS_props = defineProps();
+import { createCharacterArtwork } from '@/utils/characterArt';
+const props = defineProps();
 const gameLabels = {
     genshin: '原神',
-    starrail: '星穹铁道',
+    starrail: '崩坏：星穹铁道',
     hi3: '崩坏3',
     zzz: '绝区零',
 };
+const fallbackImage = createCharacterArtwork({
+    name: props.character.name,
+    title: props.character.title,
+    game: props.character.game,
+    accent: props.character.accent,
+});
+function handleImageError(event) {
+    const image = event.currentTarget;
+    if (!(image instanceof HTMLImageElement) || image.src === fallbackImage) {
+        return;
+    }
+    image.src = fallbackImage;
+}
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
@@ -31,9 +45,12 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.d
     ...{ style: ({ background: `linear-gradient(140deg, ${__VLS_ctx.character.accent}, #101726)` }) },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.img)({
+    ...{ onError: (__VLS_ctx.handleImageError) },
     src: (__VLS_ctx.character.image),
     alt: (__VLS_ctx.character.name),
     loading: "lazy",
+    decoding: "async",
+    referrerpolicy: "no-referrer",
 });
 if (__VLS_ctx.rank) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
@@ -89,6 +106,7 @@ const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
             gameLabels: gameLabels,
+            handleImageError: handleImageError,
         };
     },
     __typeProps: {},

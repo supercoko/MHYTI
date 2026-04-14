@@ -1,4 +1,40 @@
 import { createCharacterArtwork } from '@/utils/characterArt';
+const GENSHIN_WISH_ART_BASE = 'https://enka.network/ui';
+const STAR_RAIL_PORTRAIT_BASE = 'https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/image/character_portrait';
+const remoteCharacterImages = {
+    venti: `${GENSHIN_WISH_ART_BASE}/UI_Gacha_AvatarImg_Venti.png`,
+    zhongli: `${GENSHIN_WISH_ART_BASE}/UI_Gacha_AvatarImg_Zhongli.png`,
+    nahida: `${GENSHIN_WISH_ART_BASE}/UI_Gacha_AvatarImg_Nahida.png`,
+    furina: `${GENSHIN_WISH_ART_BASE}/UI_Gacha_AvatarImg_Furina.png`,
+    alhaitham: `${GENSHIN_WISH_ART_BASE}/UI_Gacha_AvatarImg_Alhatham.png`,
+    kaveh: `${GENSHIN_WISH_ART_BASE}/UI_Gacha_AvatarImg_Kaveh.png`,
+    yoimiya: `${GENSHIN_WISH_ART_BASE}/UI_Gacha_AvatarImg_Yoimiya.png`,
+    arlecchino: `${GENSHIN_WISH_ART_BASE}/UI_Gacha_AvatarImg_Arlecchino.png`,
+    march7th: `${STAR_RAIL_PORTRAIT_BASE}/1001.png`,
+    danheng: `${STAR_RAIL_PORTRAIT_BASE}/1002.png`,
+    himeko: `${STAR_RAIL_PORTRAIT_BASE}/1003.png`,
+    jingyuan: `${STAR_RAIL_PORTRAIT_BASE}/1204.png`,
+    kafka: `${STAR_RAIL_PORTRAIT_BASE}/1005.png`,
+    silverwolf: `${STAR_RAIL_PORTRAIT_BASE}/1006.png`,
+    firefly: `${STAR_RAIL_PORTRAIT_BASE}/1310.png`,
+    aventurine: `${STAR_RAIL_PORTRAIT_BASE}/1304.png`,
+    kiana: 'https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f7/White_Comet_%28Thumbnail%29.png/revision/latest?cb=20240211115031',
+    mei: 'https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/68/Crimson_Impulse_%28Thumbnail%29.png/revision/latest?cb=20240211113145',
+    bronya: 'https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/24/Valkyrie_Chariot_%28Thumbnail%29.png/revision/latest?cb=20240211112204',
+    seele: 'https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/07/Swallowtail_Phantasm_%28Thumbnail%29.png/revision/latest?cb=20240211092726',
+    fuhua: 'https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d5/Valkyrie_Accipiter_%28Thumbnail%29.png/revision/latest?cb=20240211095146',
+    elysia: 'https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/72/Miss_Pink_Elf%E2%99%AA_%28Thumbnail%29.png/revision/latest?cb=20240211091457',
+    rita: 'https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3e/Umbral_Rose_%28Thumbnail%29.png/revision/latest?cb=20240211093333',
+    theresa: 'https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/55/Valkyrie_Pledge_%28Thumbnail%29.png/revision/latest?cb=20240211100014',
+    belle: 'https://static.wikia.nocookie.net/zenless-zone-zero/images/6/6e/Agent_Belle_Portrait.png/revision/latest?cb=20240707002545',
+    wise: 'https://static.wikia.nocookie.net/zenless-zone-zero/images/e/e8/Agent_Wise_Portrait.png/revision/latest?cb=20240707002534',
+    anby: 'https://static.wikia.nocookie.net/zenless-zone-zero/images/b/bd/Agent_Anby_Demara_Portrait.png/revision/latest?cb=20240706234414',
+    nicole: 'https://static.wikia.nocookie.net/zenless-zone-zero/images/7/7a/Agent_Nicole_Demara_Portrait.png/revision/latest?cb=20240707011646',
+    ellen: 'https://static.wikia.nocookie.net/zenless-zone-zero/images/e/e3/Agent_Ellen_Joe_Portrait.png/revision/latest?cb=20241007222138',
+    zhuyuan: 'https://static.wikia.nocookie.net/zenless-zone-zero/images/0/07/Agent_Zhu_Yuan_Portrait.png/revision/latest?cb=20240708205906',
+    lycaon: 'https://static.wikia.nocookie.net/zenless-zone-zero/images/5/5f/Agent_Von_Lycaon_Portrait.png/revision/latest?cb=20240707002420',
+    koleda: 'https://static.wikia.nocookie.net/zenless-zone-zero/images/d/d6/Agent_Koleda_Belobog_Portrait.png/revision/latest?cb=20240706234545',
+};
 const baseVectors = {
     'luminous-lead': {
         expression: 3,
@@ -91,15 +127,19 @@ export const gameThemes = [
         subtitle: '都市潮流、动作爽感和轻快节奏兼具。',
     },
 ];
-function makeCharacter(seed) {
-    return {
-        ...seed,
-        image: createCharacterArtwork({
+function resolveCharacterImage(seed) {
+    return (remoteCharacterImages[seed.id] ??
+        createCharacterArtwork({
             name: seed.name,
             title: seed.title,
             game: seed.game,
             accent: seed.accent,
-        }),
+        }));
+}
+function makeCharacter(seed) {
+    return {
+        ...seed,
+        image: resolveCharacterImage(seed),
         vector: {
             ...baseVectors[seed.archetypeId],
             ...seed.vector,

@@ -5,6 +5,7 @@ import { useRouter } from 'vue-router'
 import CharacterCard from '@/components/CharacterCard.vue'
 import TraitBar from '@/components/TraitBar.vue'
 import type { DimensionPair } from '@/types/quiz'
+import { createCharacterArtwork } from '@/utils/characterArt'
 import { clearAllQuizStorage, getSavedQuizResult } from '@/utils/storage'
 import { TRAIT_CONFIG } from '@/utils/quizEngine'
 
@@ -20,6 +21,29 @@ const traits = computed(() =>
     score: result.value?.scores[pair],
   })),
 )
+
+const featuredFallbackImage = computed(() => {
+  if (!featuredCharacter.value) {
+    return ''
+  }
+
+  return createCharacterArtwork({
+    name: featuredCharacter.value.name,
+    title: featuredCharacter.value.title,
+    game: featuredCharacter.value.game,
+    accent: featuredCharacter.value.accent,
+  })
+})
+
+function handleFeaturedImageError(event: Event) {
+  const image = event.currentTarget
+
+  if (!(image instanceof HTMLImageElement) || image.src === featuredFallbackImage.value) {
+    return
+  }
+
+  image.src = featuredFallbackImage.value
+}
 
 function restartQuiz() {
   clearAllQuizStorage()
@@ -40,7 +64,14 @@ function restartQuiz() {
 
       <section class="result-hero card-panel">
         <div class="result-main-art">
-          <img :src="featuredCharacter.image" :alt="featuredCharacter.name" />
+          <img
+            :src="featuredCharacter.image"
+            :alt="featuredCharacter.name"
+            loading="eager"
+            decoding="async"
+            referrerpolicy="no-referrer"
+            @error="handleFeaturedImageError"
+          />
         </div>
 
         <div class="result-copy">
@@ -107,7 +138,8 @@ function restartQuiz() {
           <h2>测试结果为娱乐化角色匹配。</h2>
         </div>
         <p>
-          角色文案与对应关系基于公开剧情印象和玩家语境做了同人化重构。站内角色图为原创风格卡面，不代表官方授权素材。
+          角色文案与对应关系基于公开剧情印象和玩家语境做了同人化重构。站内角色图使用公开可访问立绘与社区镜像，
+          仅作非商业展示，版权归对应权利方所有。
         </p>
       </section>
     </section>

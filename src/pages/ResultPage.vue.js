@@ -2,6 +2,7 @@ import { computed } from 'vue';
 import { useRouter } from 'vue-router';
 import CharacterCard from '@/components/CharacterCard.vue';
 import TraitBar from '@/components/TraitBar.vue';
+import { createCharacterArtwork } from '@/utils/characterArt';
 import { clearAllQuizStorage, getSavedQuizResult } from '@/utils/storage';
 import { TRAIT_CONFIG } from '@/utils/quizEngine';
 const router = useRouter();
@@ -13,6 +14,24 @@ const traits = computed(() => ['E_I', 'S_N', 'T_F', 'J_P'].map((pair) => ({
     config: TRAIT_CONFIG[pair],
     score: result.value?.scores[pair],
 })));
+const featuredFallbackImage = computed(() => {
+    if (!featuredCharacter.value) {
+        return '';
+    }
+    return createCharacterArtwork({
+        name: featuredCharacter.value.name,
+        title: featuredCharacter.value.title,
+        game: featuredCharacter.value.game,
+        accent: featuredCharacter.value.accent,
+    });
+});
+function handleFeaturedImageError(event) {
+    const image = event.currentTarget;
+    if (!(image instanceof HTMLImageElement) || image.src === featuredFallbackImage.value) {
+        return;
+    }
+    image.src = featuredFallbackImage.value;
+}
 function restartQuiz() {
     clearAllQuizStorage();
     router.push('/quiz');
@@ -57,8 +76,12 @@ if (__VLS_ctx.result && __VLS_ctx.featuredCharacter) {
         ...{ class: "result-main-art" },
     });
     __VLS_asFunctionalElement(__VLS_intrinsicElements.img)({
+        ...{ onError: (__VLS_ctx.handleFeaturedImageError) },
         src: (__VLS_ctx.featuredCharacter.image),
         alt: (__VLS_ctx.featuredCharacter.name),
+        loading: "eager",
+        decoding: "async",
+        referrerpolicy: "no-referrer",
     });
     __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
         ...{ class: "result-copy" },
@@ -258,6 +281,7 @@ const __VLS_self = (await import('vue')).defineComponent({
             featuredCharacter: featuredCharacter,
             otherMatches: otherMatches,
             traits: traits,
+            handleFeaturedImageError: handleFeaturedImageError,
             restartQuiz: restartQuiz,
         };
     },

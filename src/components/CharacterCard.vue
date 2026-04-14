@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { CharacterMatch } from '@/types/quiz'
+import { createCharacterArtwork } from '@/utils/characterArt'
 
-defineProps<{
+const props = defineProps<{
   character: CharacterMatch
   compact?: boolean
   rank?: number
@@ -9,16 +10,40 @@ defineProps<{
 
 const gameLabels = {
   genshin: '原神',
-  starrail: '星穹铁道',
+  starrail: '崩坏：星穹铁道',
   hi3: '崩坏3',
   zzz: '绝区零',
 } as const
+
+const fallbackImage = createCharacterArtwork({
+  name: props.character.name,
+  title: props.character.title,
+  game: props.character.game,
+  accent: props.character.accent,
+})
+
+function handleImageError(event: Event) {
+  const image = event.currentTarget
+
+  if (!(image instanceof HTMLImageElement) || image.src === fallbackImage) {
+    return
+  }
+
+  image.src = fallbackImage
+}
 </script>
 
 <template>
   <article class="character-card card-panel" :class="{ compact }">
     <div class="character-media" :style="{ background: `linear-gradient(140deg, ${character.accent}, #101726)` }">
-      <img :src="character.image" :alt="character.name" loading="lazy" />
+      <img
+        :src="character.image"
+        :alt="character.name"
+        loading="lazy"
+        decoding="async"
+        referrerpolicy="no-referrer"
+        @error="handleImageError"
+      />
       <span v-if="rank" class="rank-badge">TOP {{ rank }}</span>
       <span class="game-badge">{{ gameLabels[character.game] }}</span>
     </div>
