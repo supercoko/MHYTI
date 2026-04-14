@@ -1,0 +1,170 @@
+[
+  {
+    "id": "luminous-lead",
+    "name": "辉光领航者",
+    "subtitle": "一进场就把队伍气氛点亮的人",
+    "oneLiner": "你像活动主视觉上的那束光，天然会把人心和节奏往前带。",
+    "description": "你习惯在关键时刻站出来定调，既能点燃士气，也敢先迈出第一步。无论是开荒、社交还是大型活动，你都更像把人拢到一起的推进器。",
+    "tags": ["高表达", "带头感", "舞台中心"],
+    "narrativeRole": "开拓主心骨",
+    "spotlight": "大家还在观望时，你已经把第一枪打响了。",
+    "weakness": "容易把自己推到最前排，也容易在持续输出中忘记留余量。",
+    "keywords": ["热度", "引导", "气场", "发起"],
+    "accent": "#ffb45b",
+    "vector": {
+      "expression": 3,
+      "temperature": 2,
+      "judgement": 1,
+      "order": 0,
+      "agency": 3,
+      "aura": 1
+    }
+  },
+  {
+    "id": "icebound-observer",
+    "name": "静海观测者",
+    "subtitle": "安静、稳定、判断很准的人",
+    "oneLiner": "你不会急着出声，但你往往是最早看清局势的人。",
+    "description": "你更擅长先收集信息、再做判断。你不追求热闹的存在感，却常常能在混乱里稳住节奏，用冷静和精确把局面拆开来看。",
+    "tags": ["低噪音", "高判断", "冷静感"],
+    "narrativeRole": "后场观察位",
+    "spotlight": "局势越复杂，你越能保持清醒。",
+    "weakness": "过度克制会让别人误以为你不在意，也可能错过更直接的连接。",
+    "keywords": ["观察", "分析", "冷静", "稳态"],
+    "accent": "#79b7ff",
+    "vector": {
+      "expression": -2,
+      "temperature": -2,
+      "judgement": 3,
+      "order": 2,
+      "agency": 1,
+      "aura": 2
+    }
+  },
+  {
+    "id": "oathbound-captain",
+    "name": "誓律统筹者",
+    "subtitle": "能把队伍和计划一起扛起来的人",
+    "oneLiner": "你像那种把排期、责任和结果都记在心里的队长。",
+    "description": "你自带统筹欲和承担感，很少把重要的事交给运气。你会把资源、时间和成员状态都纳入考虑，努力让事情稳稳落地。",
+    "tags": ["责任感", "守秩序", "抗压"],
+    "narrativeRole": "编队中轴",
+    "spotlight": "一旦进入执行阶段，大家自然会等你来定盘。",
+    "weakness": "太想把一切照顾周全，容易把自己的压力堆得过高。",
+    "keywords": ["秩序", "结构", "扛事", "规划"],
+    "accent": "#6dc7a3",
+    "vector": {
+      "expression": 0,
+      "temperature": 1,
+      "judgement": 2,
+      "order": 3,
+      "agency": 2,
+      "aura": 1
+    }
+  },
+  {
+    "id": "trickster-orbit",
+    "name": "量子整活师",
+    "subtitle": "总能换角度破局的人",
+    "oneLiner": "你不一定按常规出牌，但你总能把局面玩出新的解法。",
+    "description": "你对变化、机会和新鲜玩法异常敏感。别人觉得麻烦的限制，到了你这里可能反而是一种灵感来源。你常常是那个给场子带来反转的人。",
+    "tags": ["机动", "灵感", "破局"],
+    "narrativeRole": "奇策副核",
+    "spotlight": "规则一旦变死，你就会本能地去找缝。",
+    "weakness": "太喜欢变化时，别人可能跟不上你的节奏，你自己也容易分心。",
+    "keywords": ["整活", "反转", "即兴", "变招"],
+    "accent": "#8b8fff",
+    "vector": {
+      "expression": 2,
+      "temperature": 1,
+      "judgement": 1,
+      "order": -1,
+      "agency": 3,
+      "aura": 1
+    }
+  },
+  {
+    "id": "gentle-healer",
+    "name": "共鸣修复者",
+    "subtitle": "能让队伍慢慢回稳的人",
+    "oneLiner": "你不一定最锋利，但你常常是最让人放心的那一个。",
+    "description": "你对他人的情绪、关系与节奏变化很敏感，擅长把断掉的连接重新缝起来。你未必抢镜，却会在很多关键时刻给出真正有效的支持。",
+    "tags": ["温柔", "修复", "包容"],
+    "narrativeRole": "后勤安定点",
+    "spotlight": "别人快要掉线的时候，你总能把他们拉回来。",
+    "weakness": "容易把别人的情绪也背在自己身上，久了会有透支感。",
+    "keywords": ["支持", "陪伴", "疗愈", "缓冲"],
+    "accent": "#f09ac1",
+    "vector": {
+      "expression": 1,
+      "temperature": 3,
+      "judgement": 1,
+      "order": 1,
+      "agency": 1,
+      "aura": 0
+    }
+  },
+  {
+    "id": "shadow-strategist",
+    "name": "幕间执棋者",
+    "subtitle": "在暗处把棋盘摆好的人",
+    "oneLiner": "你先想全局，再决定自己什么时候落子。",
+    "description": "你更在意结构、变量和长期收益，不急着亮底牌。你习惯在局势形成之前就提前预判，因此真正出手时通常都带着明确目的。",
+    "tags": ["布局", "压场", "掌控感"],
+    "narrativeRole": "战略操盘位",
+    "spotlight": "别人还在反应发生了什么，你已经在想下一步怎么接。",
+    "weakness": "过强的控制欲和预判欲，可能让你显得过于有距离感。",
+    "keywords": ["谋划", "预判", "节制", "暗线"],
+    "accent": "#7b6cff",
+    "vector": {
+      "expression": -1,
+      "temperature": -1,
+      "judgement": 3,
+      "order": 2,
+      "agency": 2,
+      "aura": 3
+    }
+  },
+  {
+    "id": "chaos-spark",
+    "name": "裂界点火者",
+    "subtitle": "把平静局面烧出火花的人",
+    "oneLiner": "你出现的地方，剧情通常不会太平。",
+    "description": "你厌倦无聊和套路，也不怕把局面推到更刺激的位置。你有强烈的即时推动力，擅长在混乱里抢出转机，也常常带着不受控的魅力。",
+    "tags": ["爆点", "冲劲", "戏剧性"],
+    "narrativeRole": "高压触发器",
+    "spotlight": "僵局持续太久时，你往往就是那个引爆变化的人。",
+    "weakness": "冲太快时，容易把还没准备好的人一起卷进来。",
+    "keywords": ["高能", "推进", "不受控", "反应快"],
+    "accent": "#f36f83",
+    "vector": {
+      "expression": 2,
+      "temperature": 1,
+      "judgement": -1,
+      "order": -2,
+      "agency": 3,
+      "aura": 2
+    }
+  },
+  {
+    "id": "moonlit-guardian",
+    "name": "月蚀守望者",
+    "subtitle": "沉默但可靠的边界守护者",
+    "oneLiner": "你不爱抢灯光，但你常常是最后那道没塌的防线。",
+    "description": "你更重视稳定、边界和长久的守护感。你未必高调表达，但会用持续、安静的方式承担责任，让重要的人和事有地方可以落脚。",
+    "tags": ["守护", "克制", "稳定"],
+    "narrativeRole": "防线锚点",
+    "spotlight": "真正重要的东西，你会稳稳守住很久。",
+    "weakness": "太能扛也太能忍，容易让自己的需求一直被延后。",
+    "keywords": ["守望", "责任", "边界", "沉静"],
+    "accent": "#8fb8ff",
+    "vector": {
+      "expression": -1,
+      "temperature": 1,
+      "judgement": 2,
+      "order": 3,
+      "agency": 1,
+      "aura": 2
+    }
+  }
+]

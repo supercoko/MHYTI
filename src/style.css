@@ -1,0 +1,175 @@
+:root {
+  color-scheme: dark;
+  --bg-main: #07101d;
+  --bg-elevated: #0d1728;
+  --bg-soft: #122038;
+  --text-main: #edf2ff;
+  --text-soft: #ced7ea;
+  --text-dim: #95a1bb;
+  --accent-gold: #ffd78f;
+  --accent-cyan: #79c9ff;
+  --shadow-panel: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(85, 143, 255, 0.14), transparent 25%),
+    radial-gradient(circle at 20% 20%, rgba(255, 162, 94, 0.12), transparent 18%),
+    linear-gradient(180deg, #08111f, #07101d 32%, #0b1424 100%);
+  color: var(--text-main);
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.01em;
+}
+
+.page-shell {
+  padding: 1.2rem 0 3rem;
+}
+
+.shell-container {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.content-section,
+.stack-section {
+  margin-top: 1.5rem;
+}
+
+.card-panel {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(12, 21, 37, 0.84);
+  box-shadow: var(--shadow-panel);
+  backdrop-filter: blur(16px);
+  border-radius: 28px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.section-heading h1,
+.section-heading h2 {
+  margin: 0.45rem 0 0;
+}
+
+.primary-btn,
+.ghost-btn,
+.text-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border-radius: 999px;
+  padding: 0 1.2rem;
+  border: 1px solid transparent;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, var(--accent-gold), #ff9d7a);
+  color: #211102;
+  font-weight: 900;
+}
+
+.ghost-btn {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.text-btn {
+  background: transparent;
+  color: var(--text-dim);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  padding: 0.42rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 215, 143, 0.15);
+  color: #ffedc2;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+@media (max-width: 980px) {
+  .character-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    padding-top: 0.8rem;
+  }
+
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row {
+    width: 100%;
+  }
+
+  .primary-btn,
+  .ghost-btn {
+    width: 100%;
+  }
+}

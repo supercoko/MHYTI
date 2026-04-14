@@ -1,0 +1,258 @@
+[
+  {
+    "id": "q1",
+    "text": "新版本一开，我会第一时间拉朋友上线，一起冲热度和首周体验。",
+    "scene": "开服社交",
+    "dimension": "E_I",
+    "sign": 1,
+    "weights": { "hero": 2, "trickster": 2, "healer": 1, "lonewolf": -2, "strategist": -1 }
+  },
+  {
+    "id": "q2",
+    "text": "比起立刻上手，我更想先理解版本环境、机制结构和长期资源路线。",
+    "scene": "版本规划",
+    "dimension": "S_N",
+    "sign": -1,
+    "weights": { "strategist": 2, "trickster": 1, "healer": 0, "ruler": 1, "guardian": 0 }
+  },
+  {
+    "id": "q3",
+    "text": "配队、养成或抽卡时，我会优先看数值、机制和收益，而不是单纯看喜欢。",
+    "scene": "养成决策",
+    "dimension": "T_F",
+    "sign": 1,
+    "weights": { "strategist": 2, "ruler": 2, "healer": -2, "guardian": -1, "berserker": 1 }
+  },
+  {
+    "id": "q4",
+    "text": "我会提前安排体力、周本和素材路线，尽量避免自己临时补作业。",
+    "scene": "日常管理",
+    "dimension": "J_P",
+    "sign": 1,
+    "weights": { "ruler": 2, "guardian": 1, "strategist": 1, "trickster": -2, "berserker": -1 }
+  },
+  {
+    "id": "q5",
+    "text": "只要答应了朋友一起刷活动或清本，我通常会按约定时间准点出现。",
+    "scene": "组队承诺",
+    "dimension": "J_P",
+    "sign": 1,
+    "weights": { "ruler": 2, "guardian": 2, "strategist": 1, "trickster": -2 }
+  },
+  {
+    "id": "q6",
+    "text": "遇到剧情争议时，我更习惯先把已知信息拼起来，再决定站队。",
+    "scene": "剧情讨论",
+    "dimension": "T_F",
+    "sign": 1,
+    "weights": { "strategist": 2, "ruler": 1, "guardian": 0, "healer": -1, "trickster": 0 }
+  },
+  {
+    "id": "q7",
+    "text": "高压挑战里只要局势还没死，我通常会想继续搏一把而不是直接重开。",
+    "scene": "高压战斗",
+    "dimension": "E_I",
+    "sign": 1,
+    "weights": { "hero": 1, "berserker": 2, "trickster": 1, "guardian": -1, "lonewolf": 0 }
+  },
+  {
+    "id": "q8",
+    "text": "桌面、仓库、截图和攻略收藏夹如果太乱，会让我忍不住整理到更顺手。",
+    "scene": "个人习惯",
+    "dimension": "J_P",
+    "sign": 1,
+    "weights": { "ruler": 2, "guardian": 1, "strategist": 1, "trickster": -2 }
+  },
+  {
+    "id": "q9",
+    "text": "我很少在社群里直接抛情绪，更倾向于等自己想清楚以后再说。",
+    "scene": "情绪表达",
+    "dimension": "E_I",
+    "sign": -1,
+    "weights": { "lonewolf": 2, "strategist": 1, "guardian": 1, "hero": -1, "trickster": -1 }
+  },
+  {
+    "id": "q10",
+    "text": "面对争议角色或争议剧情，我会自然去拆逻辑、动机和设定闭环。",
+    "scene": "内容分析",
+    "dimension": "S_N",
+    "sign": -1,
+    "weights": { "strategist": 2, "lonewolf": 1, "ruler": 1, "hero": 0, "guardian": 0 }
+  },
+  {
+    "id": "q11",
+    "text": "看到喜欢的角色被误解时，我会下意识想替他解释清楚。",
+    "scene": "角色共情",
+    "dimension": "T_F",
+    "sign": -1,
+    "weights": { "healer": 2, "hero": 1, "guardian": 1, "strategist": -1, "ruler": -1 }
+  },
+  {
+    "id": "q12",
+    "text": "漫展、线下活动或游戏展上，我往往比身边人更容易主动开口和别人聊起来。",
+    "scene": "线下社交",
+    "dimension": "E_I",
+    "sign": 1,
+    "weights": { "hero": 2, "trickster": 2, "healer": 1, "lonewolf": -2 }
+  },
+  {
+    "id": "q13",
+    "text": "只要梗够巧、够狠，我对阴阳怪气或地狱笑话的接受度会比较高。",
+    "scene": "社区幽默",
+    "dimension": "T_F",
+    "sign": 1,
+    "weights": { "strategist": 1, "berserker": 2, "trickster": 1, "healer": -2, "guardian": -1 }
+  },
+  {
+    "id": "q14",
+    "text": "卡关时，我不介意直接查攻略、看视频或研究别人开发出来的捷径。",
+    "scene": "通关方式",
+    "dimension": "S_N",
+    "sign": 1,
+    "weights": { "trickster": 2, "strategist": 1, "lonewolf": 1, "ruler": -1, "guardian": -1 }
+  },
+  {
+    "id": "q15",
+    "text": "我对“剧情角色在二创里被扁平化消费”这件事，通常会有点不爽。",
+    "scene": "二创态度",
+    "dimension": "T_F",
+    "sign": -1,
+    "weights": { "healer": 2, "guardian": 1, "hero": 1, "strategist": -1, "berserker": 0 }
+  },
+  {
+    "id": "q16",
+    "text": "我容易因为一个很酷的演出、构图、BGM 或战斗手感，直接喜欢上一整个角色。",
+    "scene": "审美触发",
+    "dimension": "S_N",
+    "sign": 1,
+    "weights": { "hero": 1, "trickster": 1, "healer": 1, "guardian": -1, "ruler": -1 }
+  },
+  {
+    "id": "q17",
+    "text": "看完刀子剧情后，我通常需要缓一阵，甚至还会反复回味很久。",
+    "scene": "剧情后劲",
+    "dimension": "T_F",
+    "sign": -1,
+    "weights": { "healer": 2, "guardian": 1, "hero": 1, "strategist": -1 }
+  },
+  {
+    "id": "q18",
+    "text": "抽卡沉船时，我更倾向于理性复盘概率和资源，而不是直接情绪爆炸。",
+    "scene": "抽卡心态",
+    "dimension": "T_F",
+    "sign": 1,
+    "weights": { "strategist": 2, "ruler": 1, "guardian": 1, "healer": -2 }
+  },
+  {
+    "id": "q19",
+    "text": "我会把自己代入角色关系和命运抉择，甚至在日常里也会想起那些情节。",
+    "scene": "沉浸体验",
+    "dimension": "S_N",
+    "sign": -1,
+    "weights": { "healer": 1, "strategist": 2, "guardian": 1, "ruler": -1, "hero": 0 }
+  },
+  {
+    "id": "q20",
+    "text": "比起当围观群众，我更容易在群里或评论区直接参与讨论、接梗和发言。",
+    "scene": "社区互动",
+    "dimension": "E_I",
+    "sign": 1,
+    "weights": { "hero": 2, "trickster": 2, "healer": 1, "lonewolf": -2 }
+  },
+  {
+    "id": "q21",
+    "text": "为了喜欢的角色，我会认真规划资源、囤材料，甚至提前几周开始准备。",
+    "scene": "厨力投入",
+    "dimension": "J_P",
+    "sign": 1,
+    "weights": { "guardian": 1, "ruler": 2, "healer": 1, "trickster": -1, "berserker": -1 }
+  },
+  {
+    "id": "q22",
+    "text": "如果推的角色退场、离队或迎来很重的剧情节点，我会明显受到情绪冲击。",
+    "scene": "角色投入",
+    "dimension": "T_F",
+    "sign": -1,
+    "weights": { "healer": 2, "hero": 1, "guardian": 1, "strategist": -1 }
+  },
+  {
+    "id": "q23",
+    "text": "我脑内经常会开“如果我是这个角色/如果我在这条线里会怎么选”的小剧场。",
+    "scene": "代入想象",
+    "dimension": "E_I",
+    "sign": -1,
+    "weights": { "lonewolf": 2, "healer": 1, "strategist": 1, "hero": -1 }
+  },
+  {
+    "id": "q24",
+    "text": "哪怕内容质量一般，只要角色人设和氛围做得够对味，我也可能继续追下去。",
+    "scene": "内容取向",
+    "dimension": "S_N",
+    "sign": 1,
+    "weights": { "hero": 1, "trickster": 1, "healer": 1, "ruler": -1, "guardian": -1 }
+  },
+  {
+    "id": "q25",
+    "text": "临场局势一乱，我反而会变得更兴奋，觉得终于到能发挥的时候了。",
+    "scene": "临场反应",
+    "dimension": "E_I",
+    "sign": 1,
+    "weights": { "berserker": 2, "trickster": 1, "hero": 1, "guardian": -1 }
+  },
+  {
+    "id": "q26",
+    "text": "我更享受安静地刷内容、整理感受，而不是随时把喜欢公开表达出来。",
+    "scene": "表达方式",
+    "dimension": "E_I",
+    "sign": -1,
+    "weights": { "lonewolf": 2, "guardian": 1, "strategist": 1, "hero": -1 }
+  },
+  {
+    "id": "q27",
+    "text": "我会希望故事给重要角色一个足够体面的交代，否则会很难释怀。",
+    "scene": "剧情底线",
+    "dimension": "T_F",
+    "sign": -1,
+    "weights": { "healer": 2, "guardian": 2, "strategist": -1, "berserker": 0 }
+  },
+  {
+    "id": "q28",
+    "text": "理想假期对我来说更像一个人安静补剧情、刷地图、做自己的小计划。",
+    "scene": "休闲偏好",
+    "dimension": "E_I",
+    "sign": -1,
+    "weights": { "lonewolf": 2, "guardian": 1, "strategist": 1, "hero": -2 }
+  },
+  {
+    "id": "q29",
+    "text": "我对太吵、太失控、太没边界的玩笑会下意识拉开距离。",
+    "scene": "边界感",
+    "dimension": "T_F",
+    "sign": 1,
+    "weights": { "ruler": 1, "guardian": 1, "strategist": 1, "healer": -1, "berserker": -2 }
+  },
+  {
+    "id": "q30",
+    "text": "面对奇怪设定或高风险剧情点，我的第一反应通常是“这背后是不是还有别的解法”。",
+    "scene": "设定脑洞",
+    "dimension": "S_N",
+    "sign": -1,
+    "weights": { "strategist": 2, "trickster": 1, "lonewolf": 1, "ruler": -1 }
+  },
+  {
+    "id": "q31",
+    "text": "为了喜欢的角色去下游戏、补设定或追前作，对我来说是完全可能发生的事。",
+    "scene": "补坑动力",
+    "dimension": "J_P",
+    "sign": -1,
+    "weights": { "hero": 1, "healer": 1, "trickster": 1, "ruler": -1, "guardian": 0 }
+  },
+  {
+    "id": "q32",
+    "text": "遇到新梗、新玩法或新活动时，我很容易先兴致勃勃地进去玩，再说后续安排。",
+    "scene": "即兴参与",
+    "dimension": "J_P",
+    "sign": -1,
+    "weights": { "trickster": 2, "berserker": 1, "hero": 1, "ruler": -2, "guardian": -1 }
+  }
+]
